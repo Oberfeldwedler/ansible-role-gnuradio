@@ -1,0 +1,8 @@
+galaxy_info:
+  role_name: gnuradio
+  author: oberfeldwedler
+  description:  Installs gnuradio on Ubuntu
+  license: "license (BSD, MIT)"
+  min_ansible_version: "2.1"
+  galaxy_tags:
+    - gnuradio
