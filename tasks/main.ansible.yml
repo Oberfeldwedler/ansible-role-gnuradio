@@ -1,0 +1,19 @@
+---
+# tasks file for ansible-role-gnuradio
+
+- name: Add repositories for gnuradio
+  ansible.builtin.apt_repository:
+    repo: ppa:gnuradio/gnuradio-releases
+    state: present
+
+- name: Install updates
+  ansible.builtin.apt:
+    update_cache: true
+
+- name: Install gnuradio  # noqa package-latest
+  # Reason: I want to install latest Versions of listed packages.
+  ansible.builtin.apt:
+    name:
+      - gnuradio
+      - python3-packaging
+    state: latest
